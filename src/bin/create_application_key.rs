@@ -18,7 +18,7 @@ pub async fn create_application_key() -> Result<(), ClientError> {
     // Application Key Creation
     // Please note that if an application key with the same `key` already exists, the transaction will fail.
 
-    let key = "My Application Key".as_bytes().to_vec();
+    let key = "My Application Ke298292y".as_bytes().to_vec();
     let tx = sdk.tx.data_availability.create_application_key(key);
     let res = tx.execute_and_watch_inclusion(&account, Options::default()).await?;
     assert_eq!(res.is_successful(), Some(true), "Transactions must be successful");
